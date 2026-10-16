@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bakó Ádám-Attila | Szoftverfejlesztő Portfólió és CV" />
+  <meta name="keywords" content="Bakó Ádám-Attila, szoftverfejlesztő, UMFST, Flutter, C#, Node.js, React" />
+
+  <title>Bakó Ádám-Attila | CV | RESUME</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SAJATKOD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SAJATKOD');
+  </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("service_a6s6bkj");
+    })();
+  </script>
+
+  <script src="https://www.google.com/recaptcha/api.js?render=SAJAT_RECAPTCHA_SITE_KEY"></script>
+
+  <style>
+    :root {
+      --bg-color: #121212;
+      --container-bg: #1e1e1e;
+      --text-main: #e0e0e0;
+      --text-muted: #9e9e9e;
+      --accent-color: #3f51b5;
+      --accent-light: #5c6bc0;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-text: 'Open Sans', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent-light); text-decoration: none; transition: 0.3s; }
+    a:hover { color: #fff; }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background-color: var(--container-bg);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .header-title {
+      grid-column: 1 / -1;
+      border-bottom: 2px solid #333;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header-title h1 {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      color: var(--accent-light);
+      line-height: 1.1;
+    }
+
+    .header-title h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 5px;
+    }
+
+    .contact-info-top {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-info-top a {
+      display: flex;
+      align-items: center;
+      font-family: var(--font-text);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-main);
+      background: #2a2a2a;
+      padding: 8px 15px;
+      border-radius: 5px;
+      border-left: 3px solid var(--accent-color);
+    }
+
+    .contact-info-top a:hover {
+      background: #333;
+      color: var(--accent-light);
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--accent-light);
+      border-bottom: 1px dotted var(--text-muted);
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      background-color: #333;
+      border-radius: 5px;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      border: 2px solid var(--accent-color);
+      object-fit: cover;
+    }
+
+    .personal-statement p { text-align: justify; margin-bottom: 15px; }
+
+    .available-for h3 { font-size: 1rem; text-transform: uppercase; color: var(--accent-light); }
+    .available-for ul { list-style: none; margin-bottom: 20px; }
+    .available-for ul li { margin-bottom: 5px; }
+
+    .skill-item { margin-bottom: 15px; display: flex; align-items: center; }
+    .skill-name { width: 35%; font-weight: 600; font-size: 0.9rem; }
+    .skill-bar-bg { width: 65%; background-color: #333; height: 12px; border-radius: 6px; overflow: hidden; }
+    .skill-bar-fill { background-color: var(--accent-color); height: 100%; width: 0; transition: width 1.5s ease-in-out; }
+
+    .exp-item { margin-bottom: 25px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+    .exp-header h3 { font-size: 1.2rem; color: #fff; }
+    .exp-date { background: #333; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+    .exp-role { font-weight: 600; color: var(--accent-light); margin-bottom: 5px; }
+
+    .contact-form-wrapper {
+      grid-column: 1 / -1;
+      background: #222;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 12px; background: #121212; border: 1px solid #444; color: #fff; border-radius: 4px; font-family: var(--font-text);
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--accent-light);
+    }
+    .submit-btn {
+      background-color: var(--accent-color); color: #fff; border: none; padding: 12px 25px; font-size: 1rem; cursor: pointer; border-radius: 4px; transition: 0.3s; font-weight: bold;
+    }
+    .submit-btn:hover { background-color: var(--accent-light); }
+    .submit-btn:disabled { background-color: #555; cursor: not-allowed; }
+
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; padding: 20px; margin: 20px; }
+      .header-title h1 { font-size: 2.5rem; }
+      .contact-info-top { flex-direction: column; gap: 10px; }
+      .skill-item { flex-direction: column; align-items: flex-start; }
+      .skill-name, .skill-bar-bg { width: 100%; }
+      .skill-name { margin-bottom: 5px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-title">
+    <h1>Bakó Ádám-Attila</h1>
+    <h2>Informatika Hallgató | Szoftverfejlesztő</h2>
+
+    <div class="contact-info-top">
+      <a href="mailto:adambako@gmail.com" title="Írj nekem e-mailt!">✉ adambako2005@gmail.com</a>
+      <a href="tel:+40769224463" title="Hívj fel!">📞 +40 769 224 463</a>
+      <a href="https://github.com/bako-adam31" target="_blank" title="GitHub Profil">🔗 GitHub</a>
+      <a href="https://www.linkedin.com/in/ádám-attila-bakó-20297b31b/" target="_blank" title="LinkedIn Profil">🔗 LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="left-col">
+    <h2 class="section-title">Bemutatkozás</h2>
+    <div class="personal-statement">
+      <img src="img/profilkep.jpg" alt="Bakó Ádám-Attila" class="profile-pic" onerror="this.style.display='none'">
+
+      <p>Informatika szakos hallgató vagyok a marosvásárhelyi UMFST „George Emil Palade” egyetemen. Szenvedélyem a szoftverfejlesztés, különösen a backend és a mobilalkalmazások területe. Erős fókusszal tekintek a jól strukturált architektúrákra, a tiszta kódra és a modern, letisztult UI/UX tervezésre.</p>
+      <p>Célirányos és gyakorlatias tanuló vagyok, aki a leginkább komplex, működő projektek (mint például egyedi mobilalkalmazások vagy utazástervező rendszerek) építésén keresztül sajátítja el az új technológiákat.</p>
+      <div style="clear: both;"></div>
+    </div>
+
+    <h2 class="section-title">Oktatás</h2>
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>UMFST G.E. Palade</h3>
+        <span class="exp-date">2024 - JELENLEG</span>
+      </div>
+      <div class="exp-role">Informatika szak (Magyar tagozat) | Marosvásárhely</div>
+      <p>BSc harmadéves hallgató. Fő területek: Szoftverfejlesztés, Adatbázisok, Algoritmusok.</p>
+    </div>
+
+    <h2 class="section-title">Nyelvek</h2>
+    <ul style="list-style: none; margin-left: 5px;">
+      <li style="margin-bottom: 5px;"><strong>Magyar:</strong> Anyanyelv</li>
+      <li style="margin-bottom: 5px;"><strong>Angol:</strong> Középfok (B2)</li>
+      <li style="margin-bottom: 5px;"><strong>Román:</strong> Középfok (B1)</li>
+    </ul>
+  </div>
+
+  <div class="right-col">
+    <h2 class="section-title" style="margin-top: 0;">Technológiák</h2>
+
+    <div class="skill-item">
+      <div class="skill-name">C# / .NET / Blazor</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Flutter / Dart</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Node.js / Express</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">React / JS / TS</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">SQL / PostgreSQL</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Java / Kotlin / C++</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+    </div>
+
+    <h2 class="section-title">Szakmai Tapasztalat & Projektek</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>TOPMOTIVE</h3>
+        <span class="exp-date">2026. JÚL - SZEPT</span>
+      </div>
+      <div class="exp-role">Szoftverfejlesztő Gyakornok | Marosvásárhely</div>
+      <p>Nyári szakmai gyakorlat. Részvétel C# .NET backend szolgáltatások fejlesztésében, Blazor frontend munkákban, SQL adatbázis kezelésben és Local Storage integrációban.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Fragram (Saját projekt)</h3>
+        <span class="exp-date">2026. MÁRCIUS</span>
+      </div>
+      <div class="exp-role">Full-Stack Fejlesztő</div>
+      <p>Parfüm ajánló mobilalkalmazás. Technológiai stack: Flutter, Dart, Firebase Authentication/Firestore, egyedi Node.js Express backend REST API-kkal.</p>
+    </div>
+  </div>
+
+  <div class="contact-form-wrapper">
+    <h2 class="section-title" style="margin-top: 0;">Lépj velem kapcsolatba!</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="user_name">Név:</label>
+        <input type="text" name="user_name" id="user_name" />
+      </div>
+
+      <div class="form-group">
+        <label for="user_email">Email cím:</label>
+        <input type="email" name="user_email" id="user_email" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Üzenet:</label>
+        <textarea name="message" id="message" rows="5" ></textarea>
+      </div>
+
+      <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
+
+      <button type="submit" class="submit-btn" id="submitBtn">Üzenet küldése</button>
+      <div id="formStatus" style="display:none; margin-top:15px; font-weight:bold;"></div>
+    </form>
+  </div>
+
+</div>
+
+<script>
+  window.onload = function() {
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    skillBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 300);
+    });
+  };
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const statusDiv = document.getElementById('formStatus');
+    const btn = document.getElementById('submitBtn');
+
+    btn.disabled = true;
+    btn.innerText = 'Küldés folyamatban...';
+
+    grecaptcha.ready(function() {
+      grecaptcha.execute('SAJAT_RECAPTCHA_SITE_KEY', {action: 'submit'}).then(function(token) {
+
+        document.getElementById('recaptchaResponse').value = token;
+
+        emailjs.sendForm('SAJAT_SERVICE_ID', 'SAJAT_TEMPLATE_ID', '#contactForm')
+          .then(function() {
+            statusDiv.style.display = 'block';
+            statusDiv.style.color = '#4CAF50';
+            statusDiv.innerText = 'Sikeres küldés! Az automatikus visszaigazoló e-mailt elküldtük.';
+            document.getElementById('contactForm').reset();
+            btn.disabled = false;
+            btn.innerText = 'Üzenet küldése';
+          }, function(error) {
+            statusDiv.style.display = 'block';
+            statusDiv.style.color = '#F44336';
+            statusDiv.innerText = 'Hiba történt az üzenet küldésekor. Kérlek, próbáld újra!';
+            console.log('FAILED...', error);
+            btn.disabled = false;
+            btn.innerText = 'Üzenet küldése';
+          });
+      });
+    });
+  });
+</script>
+</body>
+</html>
